@@ -1,0 +1,38 @@
+.portlet
+  box-shadow: 0 2px 0 rgba(90,97,105,.11), 0 4px 8px rgba(90,97,105,.12), 0 10px 10px rgba(90,97,105,.06), 0 7px 70px rgba(90,97,105,.1)
+  background-color: $bg-white
+  // margin-bottom: 1.4em
+  border-radius: 5px
+  +modifier('bg-purple')
+    background-color: #6B6BE4
+  +modifier('bg-blue-300')
+    background-color: #90cdf4
+  +modifier('bg-blue-400')
+    background-color: #63b3ed
+  +modifier('bg-blue-500')
+    background-color: #4299e1
+  +element('head')
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+    padding: 0 1.25rem
+    min-height: 50px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+  +element('head-title')
+    font-weight: 500
+    color: $text-darkest
+  +element('body')
+    border-radius: 5px
+    padding: .5rem 1.25rem
+
+// .filter
+//   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out
+//   +element('header')
+//     border-top-left-radius: 5px
+//     border-top-right-radius: 5px
+//     padding-top: 0.5em
+//   +element('wrapper')
+//     border-radius: inherit
+//     padding: 0.25em

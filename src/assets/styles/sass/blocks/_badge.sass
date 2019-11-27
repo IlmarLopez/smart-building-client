@@ -1,0 +1,29 @@
+.badge
+  display: inline-block
+  padding: .25em .4em
+  font-size: 85%
+  font-weight: 700
+  line-height: 1
+  text-align: center
+  white-space: nowrap
+  vertical-align: baseline
+  border-radius: .25rem
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  +modifier('primary')
+    color: #fff
+    background-color: #007bff
+  +modifier('success')
+    color: #fff
+    background-color: #28a745
+  +modifier('warning')
+    color: #212529
+    background-color: #ffc107
+  +modifier('pending')
+    color: #ffffff
+    background: #1dc9b7
+  +modifier('danger')
+    color: #fff
+    background-color: #dc3545
+  +modifier('info')
+    color: #fff
+    background-color: #17a2b8

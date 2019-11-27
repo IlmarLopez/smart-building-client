@@ -1,0 +1,48 @@
+.card
+  border-radius: 5px
+  position: relative
+  display: flex
+  flex-direction: column
+  min-width: 0
+  word-wrap: break-word
+  background-color: $white
+  background-clip: border-box
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1)
+  // max-width: 300px
+  overflow: hidden
+  +element('head')
+    padding: 0 1.25rem
+    min-height: 50px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+  +element('head-title')
+    font-weight: 500
+    color: $text-darkest
+  +element('body')
+    flex: 1 1 auto
+    padding: .5rem 1.25rem
+  +element('icon-edit')
+    padding: .3em
+    border-radius: 50%
+    color: #3d5170b5
+    position: absolute
+    right: .5em
+    top: .5em
+    &:hover
+      color: $text-dodger-blue
+      transform: scale(1.1)
+  // +element('icon-save')
+  //   padding: .3em
+  //   border-radius: 50%
+  //   color: $text-dodger-blue
+  //   position: absolute
+  //   box-shadow: 0 2px 0 rgba(90,97,105,.11), 0 4px 8px rgba(90,97,105,.12), 0 10px 10px rgba(90,97,105,.06), 0 7px 70px rgba(90,97,105,.1)
+  //   right: .5em
+  //   top: .5em
+  //   border: 1px solid rgba(0,0,0,.1)
+  //   &:hover
+  //     transform: scale(1.1)
+.card-small
+  box-shadow: 0 2px 0 rgba(90,97,105,.11), 0 4px 8px rgba(90,97,105,.12), 0 10px 10px rgba(90,97,105,.06), 0 7px 70px rgba(90,97,105,.1)

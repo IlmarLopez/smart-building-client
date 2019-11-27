@@ -1,0 +1,39 @@
+button, .button
+  display: inline-block
+  font-weight: 400
+  text-align: center
+  vertical-align: middle
+  user-select: none
+  border: 1px solid transparent
+  padding: .375rem .75rem
+  font-size: 1em
+  line-height: 1.5
+  border-radius: .25rem
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out
+  +modifier('primary')
+    color: $white
+    background-color: #22b9ff
+    border-color: #22b9ff
+    &:disabled
+      opacity: .65
+  +modifier('light')
+    color: #212529
+    background-color: #f8f9fa
+    border-color: #f8f9fa
+    &:hover
+      color: #212529
+      background-color: #e2e6ea
+      border: 1px solid #dae0e5
+  +modifier('secondary')
+    display: flex
+    align-items: center
+    background-color: transparent
+    border: 1px solid #e2e5ec
+    color: #6c7293
+    &:hover
+      // cursor: pointer
+      // background-color: rgba(113, 106, 202, 0.1)
+      // color: $text-dodger-blue
+      border: 1px solid #909497
+  +modifier('text-white')
+    color: #fff

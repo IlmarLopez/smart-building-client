@@ -1,0 +1,53 @@
+.row
+  display: flex
+  flex-wrap: wrap
+
+.container,
+.row
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+[class*='col-']
+  float: left
+  padding: 1em
+  width: 100%
+  display: inline-block
+
+.col
+  flex-basis: 0
+  flex-grow: 1
+  padding: 1em
+  max-width: 100%
+
+@for $i from 1 through $columns
+  .col-#{$i}
+    flex: 0 0 100% / $columns * $i
+  .col-offset-#{$i}
+    margin-left: 100% / $columns * $i
+
++forTablet
+  @for $i from 1 through $columns
+    .col-sm-#{$i}
+      flex: 0 0 100% / $columns * $i
+    .col-sm-offset-#{$i}
+      margin-left: 100% / $columns * $i
++forTabletLandscape
+  @for $i from 1 through $columns
+    .col-md-#{$i}
+      flex: 0 0 100% / $columns * $i
+    .col-md-offset-#{$i}
+      margin-left: 100% / $columns * $i
++forDesktop
+  @for $i from 1 through $columns
+    .col-lg-#{$i}
+      flex: 0 0 100% / $columns * $i
+    .col-lg-offset-#{$i}
+      margin-left: 100% / $columns * $i
++forDesktopLarge
+  @for $i from 1 through $columns
+    .col-xl-#{$i}
+      flex: 0 0 100% / $columns * $i
+    .col-xl-offset-#{$i}
+      margin-left: 100% / $columns * $i
