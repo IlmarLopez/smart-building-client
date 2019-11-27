@@ -1,13 +1,13 @@
 <template>
-  <layout name="LayoutDefault">
+  <Layout name="LayoutDefault">
     <section class="dashboard">
       <div class="row">
-          <div class="col-md-12">
-        <ClassroomList />
+        <div class="col-md-12">
+          <ClassroomList />
         </div>
       </div>
     </section>
-  </layout>
+  </Layout>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ import Layout from '@/layouts/Layout';
 import ClassroomList from '@/components/ClassroomList.vue';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     Layout,
     ClassroomList,

@@ -1,6 +1,6 @@
 <template>
   <div class="layout-default">
-    <sidebar
+    <Sidebar
       :class="{ 'sidebar--is-collapsed': isSidebarCollapsed }"
       @sidebar-toggle="sidebarToggle"
     />
@@ -25,7 +25,6 @@
         <slot />
       </main>
     </div>
-    <vue-snotify></vue-snotify>
   </div>
 </template>
 <script>

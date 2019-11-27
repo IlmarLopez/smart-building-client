@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <component :is="layout">
-      <router-view :layout.sync="layout"/>
+      <router-view :layout.sync="layout" />
     </component>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
     };
   },
 };
-</script>>
+</script>
 <style lang="sass">
-  @import '@/assets/styles/sass/main.sass'
+@import '@/assets/styles/sass/main.sass'
 </style>

@@ -33,13 +33,13 @@ export default {
   },
   mutations: {
     // mutations
-    FETCH_LIST_START: (state) => {
+    FETCH_LIST_START: state => {
       state.isFetchingList = true;
     },
     FETCH_LIST_SUCCESS: (state, response) => {
       const { data } = response;
 
-      data.forEach((m) => {
+      data.forEach(m => {
         Vue.set(state.entities, m.id.toString(), m);
       });
 
@@ -60,12 +60,11 @@ export default {
       return new Promise((resolve, reject) => {
         Vue.prototype
           .$http({ url: 'alarmListServlet', method: 'GET' })
-          .then((response) => {
+          .then(response => {
             resolve(response);
-            console.log(response);
             commit('FETCH_LIST_SUCCESS', response);
           })
-          .catch((err) => {
+          .catch(err => {
             reject(err);
             commit('FETCH_LIST_ERROR', err);
           });
